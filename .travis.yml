@@ -7,4 +7,5 @@ deploy:
   api_key: "$GITHUB_OAUTH"
   file: "steamclient.dylib"
   skip_cleanup: true
-  draft: true
+  on:
+    tags: true
