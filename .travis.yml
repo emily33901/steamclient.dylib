@@ -1,3 +1,5 @@
 os: osx
 
+script: chmod +x ./get.sh
+
 script: ./get.sh
