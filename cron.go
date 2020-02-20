@@ -43,6 +43,8 @@ func main() {
 			panic(err)
 		}
 
-		exec.Command("./trigger.sh").Start()
+		c := exec.Command("./trigger.sh")
+
+		c.Run()
 	}
 }
