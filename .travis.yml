@@ -1,5 +1,3 @@
 os: osx
 
-script: chmod +x ./get.sh
-
-script: ./get.sh
+script: chmod +x ./get.sh && ./get.sh
