@@ -2,6 +2,12 @@ os: osx
 
 script: chmod +x ./get.sh && ./get.sh
 
+before_deploy:
+  - git config --local user.name "Emily Hudson"
+  - git config --local user.email "emily33901@gmail.com"
+  - export TRAVIS_TAG=`date | sed "s/ /-/g" | sed "s/:/-/g"`
+  - git tag $TRAVIS_TAG
+
 deploy:
   provider: releases
   api_key: "$GITHUB_OAUTH"
