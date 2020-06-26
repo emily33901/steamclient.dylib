@@ -11,5 +11,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key: "$GITHUB_OAUTH"
-  file: "steamclient.dylib"
+  file: 
+  - "steamclient.dylib"
+  - "steamui.dylib"
   skip_cleanup: true
